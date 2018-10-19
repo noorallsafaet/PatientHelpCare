@@ -1,0 +1,77 @@
+﻿@model PatientHelpCare.DataModel.Message
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+       
+        <div class="col-lg-9 animated fadeInRight">
+            <div class="mail-box-header">
+@using (Html.BeginForm("Delete", "Messages", new { Id = Model.Id }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+                <div class="pull-right tooltip-demo">
+                    <a href="@Url.Action("Create", "Messages")" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Reply"><i class="fa fa-reply"></i> Reply</a>
+                    
+                        @Html.AntiForgeryToken()
+                    <button title="" data-placement="top" data-toggle="tooltip" data-original-title="Trash" class="btn btn-sm btn-white"><i class="fa fa-trash-o"></i></button>
+                                      
+                </div>
+}
+                <h2>
+                    View Message
+                </h2>
+                <div class="mail-tools tooltip-demo m-t-md">
+
+
+                    <h3>
+                        <span class="font-noraml">Subject: </span>@Html.DisplayFor(model => model.Subject)
+                    </h3>
+                    <h5>
+                        <span class="pull-right font-noraml">@Html.DisplayFor(model => model.DateTime)</span>
+                        <span class="font-noraml">From: </span>@ViewBag.From
+                    </h5>
+                </div>
+            </div>
+            <div class="mail-box">
+
+                <div class="mail-body">
+                    <p>
+                        Hello @Html.DisplayFor(model => model.Patient.Firstname) @Html.DisplayFor(model => model.Patient.Lastname)!
+                        <br />
+                        <br />
+                        @Html.Raw(Model.Message1)
+                </div>
+                    <div class="mail-attachment">
+                    @using (Html.BeginForm("Delete", "Messages", new { Id = Model.Id }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                <div class="mail-body text-right tooltip-demo">
+                    <a class="btn btn-sm btn-white" href="@Url.Action("Create", "Messages")"><i class="fa fa-reply"></i> Reply</a>                                          
+                        <button title="" data-placement="top" data-toggle="tooltip" data-original-title="Trash" class="btn btn-sm btn-white"><i class="fa fa-trash-o"></i> Remove</button>                    
+                </div>
+                    }
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    @Styles.Render("~/plugins/summernoteStyles")
+}
+
+@section Scripts {
+    @Scripts.Render("~/plugins/summernote")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.summernote').summernote();
+
+        });
+
+    </script>
+}

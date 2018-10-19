@@ -1,0 +1,103 @@
+﻿@model IEnumerable<PatientHelpCare.DataModel.Appointment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="wrapper wrapper-content animated fadeInUp">
+    <div class="ibox">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>List of Appointments</h5>
+                <div class="ibox-tools">
+                    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary btn-xs" })
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row m-b-sm m-t-sm">
+                    <div class="col-md-1">
+                        <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> Refresh</button>
+                    </div>
+                    <div class="col-md-11">
+                        <div class="input-group">
+                            <input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-primary"> Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-hover">
+                    <tr>
+                        <th>
+                            Full Name
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>Action</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        var space = " ";
+                        <tr>
+                            <td>
+                                @{if (ViewBag.UserType == @"Doctor")
+                                    {
+                                        @Html.DisplayFor(modelItem => item.Patient.Firstname) @space @Html.DisplayFor(modelItem => item.Patient.Lastname)
+                                    }
+                                    else
+                                    {
+                                        @Html.DisplayFor(modelItem => item.Doctor.Firstname) @space @Html.DisplayFor(modelItem => item.Doctor.Lastname)
+                                    }
+                                }                               
+                            </td>
+                            <td>
+                                @{
+                                    DateTime Date = (DateTime)item.Appointment_date;
+                                }
+                                @Date.ToShortDateString() @item.Appointment_Time
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                            <td>
+                                @{if (ViewBag.UserType == "Doctor")
+                                    {
+                                        @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-primary btn-sm" })
+                                        
+                                        @*@Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-white btn-sm" })*@
+                                        if (item.Status == "Awaiting Acceptence")
+                                        {
+                                                @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-white btn-sm" })
+                                            
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (item.Status == "Awaiting Acceptence")
+                                        {
+                                            @Html.ActionLink("Accept", "Accept", new { id = item.id }, new { @class = "btn btn-primary btn-sm" })
+                                            @Html.ActionLink("Decline", "Decline", new { id = item.id }, new { @class = "btn btn-danger btn-sm" })
+                                        }
+
+                                        else if (item.Status == "Accepted")
+                                        {
+                                            if (item.Success == null)
+                                            {
+                                                @Html.ActionLink("Complete", "Complete", new { id = item.id }, new { @class = "btn btn-warning btn-sm" })
+                                            }
+                                        }
+                                    }
+                                }                                
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

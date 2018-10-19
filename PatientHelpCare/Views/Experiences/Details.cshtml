@@ -1,0 +1,74 @@
+﻿@model PatientHelpCare.DataModel.Experience
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Details of Experience</h5>
+                    <div class="ibox-tools">
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary  btn-xs" })
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Designation)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Designation)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Organization)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Organization)
+                        </dd>
+
+                        <dt>
+                            Start Date
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.StartDate)
+                        </dd>
+
+                        <dt>
+                            End Date
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.EndDate)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Running)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Running)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Summery)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Summery)
+                        </dd>
+                    </dl>
+
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.ExperienceId }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-white" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

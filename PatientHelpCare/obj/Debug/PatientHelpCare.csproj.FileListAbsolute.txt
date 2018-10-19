@@ -1,0 +1,294 @@
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\ApplicationInsights.config
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csc.exe
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csc.exe.config
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csc.rsp
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csi.exe
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csi.rsp
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.AppContext.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\vbc.exe
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\vbc.exe.config
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\vbc.rsp
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\VBCSCompiler.exe
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\PatientHelpCare.dll.config
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\PatientHelpCare.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\PatientHelpCare.pdb
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Antlr3.Runtime.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\EntityFramework.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\EntityFramework.SqlServer.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.Web.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.ApplicationInsights.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Newtonsoft.Json.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Owin.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Helpers.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Mvc.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Optimization.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Razor.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Deployment.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Razor.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\WebGrease.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Antlr3.Runtime.pdb
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.Web.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.ApplicationInsights.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Newtonsoft.Json.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Helpers.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Mvc.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Optimization.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Razor.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Deployment.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Razor.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\EntityFramework.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\EntityFramework.SqlServer.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.pdb
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\MvcPaging.dll
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\bin\MvcPaging.pdb
+C:\Users\papon\Documents\Visual Studio 2015\Projects\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.csprojResolveAssemblyReference.cache
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\ApplicationInsights.config
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csc.exe
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csc.exe.config
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csc.rsp
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csi.exe
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\csi.rsp
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.AppContext.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.Collections.Immutable.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.IO.FileSystem.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\vbc.exe
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\vbc.exe.config
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\vbc.rsp
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\VBCSCompiler.exe
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\roslyn\VBCSCompiler.exe.config
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\PatientHelpCare.dll.config
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\PatientHelpCare.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\PatientHelpCare.pdb
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Antlr3.Runtime.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\EntityFramework.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\EntityFramework.SqlServer.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.DependencyCollector.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.Web.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.WindowsServer.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.ApplicationInsights.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Google.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Newtonsoft.Json.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Owin.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Helpers.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Mvc.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Optimization.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Razor.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Razor.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\WebGrease.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Antlr3.Runtime.pdb
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.DependencyCollector.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.Web.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.WindowsServer.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.ApplicationInsights.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\MvcPaging.pdb
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Newtonsoft.Json.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Helpers.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Mvc.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Optimization.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.Razor.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Razor.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\EntityFramework.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\EntityFramework.SqlServer.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Google.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Projects\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.csprojResolveAssemblyReference.cache
+E:\Projects\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.dll
+E:\Projects\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.pdb
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\ApplicationInsights.config
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\csc.exe
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\csc.exe.config
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\csc.rsp
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\csi.exe
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\csi.rsp
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\System.AppContext.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\System.Collections.Immutable.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\System.IO.FileSystem.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\System.Reflection.Metadata.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\vbc.exe
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\vbc.exe.config
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\vbc.rsp
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\VBCSCompiler.exe
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\roslyn\VBCSCompiler.exe.config
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\PatientHelpCare.dll.config
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\PatientHelpCare.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\PatientHelpCare.pdb
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Antlr3.Runtime.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\EntityFramework.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\EntityFramework.SqlServer.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.Agent.Intercept.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.DependencyCollector.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.Web.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.WindowsServer.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.ApplicationInsights.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Core.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Cookies.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Facebook.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Google.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.OAuth.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Twitter.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Web.Infrastructure.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Newtonsoft.Json.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Owin.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.Helpers.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.Mvc.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.Optimization.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.Razor.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Deployment.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Razor.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\WebGrease.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Antlr3.Runtime.pdb
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.DependencyCollector.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.Web.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AI.WindowsServer.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.ApplicationInsights.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\MvcPaging.pdb
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Newtonsoft.Json.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.Helpers.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.Mvc.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.Optimization.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.Razor.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Deployment.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\System.Web.WebPages.Razor.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\EntityFramework.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\EntityFramework.SqlServer.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Core.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Facebook.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Cookies.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.OAuth.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Google.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.Twitter.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.csprojAssemblyReference.cache
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.csproj.CoreCompileInputs.cache
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.csproj.CopyComplete
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.dll
+G:\New folder\New folder\PatientHelpCare\PatientHelpCare\obj\Debug\PatientHelpCare.pdb

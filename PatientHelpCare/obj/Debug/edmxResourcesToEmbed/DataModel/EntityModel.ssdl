@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Certificate">
+    <Key>
+      <PropertyRef Name="CertificateId" />
+    </Key>
+    <Property Name="CertificateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProfessionalCertificateorAward" Type="nvarchar" MaxLength="100" />
+    <Property Name="ConferringOrganization" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="300" />
+    <Property Name="Year" Type="int" />
+    <Property Name="DoctorId" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Chamber">
+    <Key>
+      <PropertyRef Name="ChamberId" />
+    </Key>
+    <Property Name="ChamberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Phone" Type="int" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Area" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="200" />
+    <Property Name="ZipCode" Type="int" Nullable="false" />
+    <Property Name="DoctorId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Doctors">
+    <Key>
+      <PropertyRef Name="DoctorId" />
+    </Key>
+    <Property Name="DoctorId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="BMDC" Type="int" Nullable="false" />
+    <Property Name="Specialist" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="OverView" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="DateOfBirth" Type="date" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="6" />
+    <Property Name="PhotoLocation" Type="nvarchar" MaxLength="150" />
+    <Property Name="PhotoName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="13" />
+    <Property Name="Homephone" Type="nvarchar" MaxLength="13" />
+    <Property Name="Officephone" Type="nvarchar" MaxLength="13" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Area" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="256" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="256" />
+    <Property Name="ZipCode" Type="int" />
+    <Property Name="JoinDate" Type="datetime" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="ExperienceId" />
+    </Key>
+    <Property Name="ExperienceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="100" />
+    <Property Name="Organization" Type="nvarchar" MaxLength="100" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="Running" Type="bit" />
+    <Property Name="Summery" Type="nvarchar" MaxLength="300" />
+    <Property Name="DoctorId" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="int" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="Blood" Type="nvarchar" MaxLength="10" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="250" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="250" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Area" Type="nvarchar" MaxLength="50" />
+    <Property Name="Zip" Type="nvarchar" MaxLength="10" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="11" />
+    <Property Name="CellPhone" Type="nvarchar" MaxLength="11" />
+    <Property Name="WorkPhone" Type="nvarchar" MaxLength="11" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="MaritialStatus" Type="nvarchar" MaxLength="10" />
+    <Property Name="Username" Type="nvarchar" MaxLength="30" />
+    <Property Name="Status" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Qualification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Degree" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="University" Type="nvarchar" MaxLength="100" />
+    <Property Name="StartYear" Type="int" Nullable="false" />
+    <Property Name="EndYear" Type="int" Nullable="false" />
+    <Property Name="DoctorId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Certificate_Doctors">
+    <End Role="Doctors" Type="Self.Doctors" Multiplicity="0..1" />
+    <End Role="Certificate" Type="Self.Certificate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctors">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Certificate">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chamber_Doctors">
+    <End Role="Doctors" Type="Self.Doctors" Multiplicity="1" />
+    <End Role="Chamber" Type="Self.Chamber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctors">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Chamber">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctors_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="Doctors" Type="Self.Doctors" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Doctors">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Experience_Doctors">
+    <End Role="Doctors" Type="Self.Doctors" Multiplicity="0..1" />
+    <End Role="Experience" Type="Self.Experience" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctors">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Experience">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Qualification_Doctors">
+    <End Role="Doctors" Type="Self.Doctors" Multiplicity="1" />
+    <End Role="Qualification" Type="Self.Qualification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctors">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Qualification">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificate" EntityType="Self.Certificate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chamber" EntityType="Self.Chamber" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Experience" EntityType="Self.Experience" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Qualification" EntityType="Self.Qualification" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Certificate_Doctors" Association="Self.FK_Certificate_Doctors">
+      <End Role="Doctors" EntitySet="Doctors" />
+      <End Role="Certificate" EntitySet="Certificate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chamber_Doctors" Association="Self.FK_Chamber_Doctors">
+      <End Role="Doctors" EntitySet="Doctors" />
+      <End Role="Chamber" EntitySet="Chamber" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctors_AspNetUsers" Association="Self.FK_Doctors_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Doctors" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Experience_Doctors" Association="Self.FK_Experience_Doctors">
+      <End Role="Doctors" EntitySet="Doctors" />
+      <End Role="Experience" EntitySet="Experience" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Qualification_Doctors" Association="Self.FK_Qualification_Doctors">
+      <End Role="Doctors" EntitySet="Doctors" />
+      <End Role="Qualification" EntitySet="Qualification" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

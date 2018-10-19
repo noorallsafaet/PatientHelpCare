@@ -1,0 +1,41 @@
+﻿@model PatientHelpCare.DataModel.Appointment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Details of Appointment</h5>
+                    <div class="ibox-tools">
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary  btn-xs" })
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Date
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Appointment_date) @Html.DisplayFor(model => model.Appointment_Time)
+                        </dd>
+
+                        <dt>
+                            Patient Full Name
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Patient.Firstname) @Html.DisplayFor(model => model.Patient.Lastname)
+                        </dd>
+                    </dl>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-white" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

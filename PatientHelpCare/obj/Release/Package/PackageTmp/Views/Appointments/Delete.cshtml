@@ -1,0 +1,54 @@
+﻿@model PatientHelpCare.DataModel.Appointment
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Delete of Appointment</h5>
+                    <div class="ibox-tools">
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary  btn-xs" })
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <h4 class="text-danger">Are you sure you want to delete this?</h4>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Appointment Date
+                        </dt>
+
+                        <dd>
+                            @{
+                                DateTime Date = (DateTime)(Model.Appointment_date);
+                            }
+                           @Date.ToShortDateString() @Html.DisplayFor(model => model.Appointment_Time)
+                        </dd>
+
+                        <dt>
+                            Patient Full Name
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Patient_Details.Patient_Name) @Html.DisplayFor(model => model.Patient_Details.Patient_Surname)
+                        </dd>
+
+                    </dl>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Delete" class="btn btn-primary" />
+                            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-white" })
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

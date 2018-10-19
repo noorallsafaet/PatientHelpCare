@@ -1,0 +1,258 @@
+﻿@{
+    ViewBag.Title = "Dashboard v.1";
+}
+
+<div class="row  border-bottom white-bg dashboard-header">
+    <div class="mail-box">
+
+        <table class="table table-hover table-mail">
+            <caption>Last Message</caption>
+            <thead>
+                <tr>
+                    @{ if (ViewBag.UserType == "Doctor")
+                        {
+                            <th>Patient</th>
+                        }
+
+                        else
+                        {
+                            <th>Doctor</th>
+                        } }
+                    
+                    <th>Message</th>
+                    <th>Date Time</th>
+                </tr>
+            </thead>
+            <tbody>
+@foreach (var item in ViewBag.LastMessage)
+{
+    if (ViewBag.UserType == "Doctor")
+    {
+        <tr class="unread">
+            <td><a href="@Url.Action("Details", "Messages", new { Id = item.Id })">@item.Patient.Firstname @item.Patient.Lastname</a></td>
+            <td><a href="@Url.Action("Details", "Messages", new { Id = item.Id })">@item.Subject</a></td>
+            <td>@item.DateTime</td>
+        </tr>
+    }
+    else
+    {
+        <tr class="unread">
+            <td><a href="@Url.Action("Details", "Messages", new { Id = item.Id })">@item.Doctor.Firstname @item.Doctor.Lastname</a></td>
+            <td><a href="@Url.Action("Details", "Messages", new { Id = item.Id })">@item.Subject</a></td>
+            <td>@item.DateTime</td>
+        </tr>
+    }
+}
+       </tbody></table>         
+</div>
+    <div class="row  border-bottom white-bg dashboard-header">
+        <div class="ibox">
+
+            <table class="table table-hover">
+                <caption>Last Appointment</caption>
+                <thead>
+                    <tr>
+                        @{ if (ViewBag.UserType == "Doctor")
+                            {
+                                <th>Patient</th>
+                            }
+
+                            else
+                            {
+                                <th>Doctor</th>
+                            } }
+                        <th>Date Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.LastAppointment)
+                    {
+                        <tr class="unread">
+                                                      
+                            <td>@{
+                                if (ViewBag.UserType == "Doctor")
+                                {
+                                    <a href="@Url.Action("index", "Appointments")">@item.Patient.Firstname @item.Patient.Lastname</a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("index", "Appointments")">@item.Doctor.Firstname @item.Doctor.Lastname</a>
+                                }
+                            }</td>                            
+                            <td>
+                                @{
+                                    DateTime Date = (DateTime)item.Appointment_date;
+                                }
+                                @Date.ToShortDateString() @item.Appointment_Time
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <div class="footer">
+            <div class="pull-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Doctor Information &copy; 2012016
+            </div>
+        </div>
+    </div>
+@section Scripts {
+    @Scripts.Render("~/plugins/flot")
+    @Scripts.Render("~/plugins/sparkline")
+    @Scripts.Render("~/plugins/chartJs")
+    @Scripts.Render("~/plugins/peity")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".bar_dashboard").peity("bar", {
+                fill: ["#1ab394", "#d7d7d7"],
+                width: 100
+            })
+
+            $("#sparkline8").sparkline([5, 6, 7, 2, 0, 4, 2, 4, 5, 7, 2, 4, 12, 14, 4, 2, 14, 12, 7], {
+                type: 'bar',
+                barWidth: 8,
+                height: '150px',
+                barColor: '#1ab394',
+                negBarColor: '#c6c6c6'
+            });
+
+            var updatingChart = $(".updating-chart").peity("line", { fill: '#1ab394', stroke: '#169c81', width: 64 })
+
+            setInterval(function () {
+                var random = Math.round(Math.random() * 10)
+                var values = updatingChart.text().split(",")
+                values.shift()
+                values.push(random)
+
+                updatingChart
+                    .text(values.join(","))
+                    .change()
+            }, 1000);
+
+            var data1 = [
+                [0, 4], [1, 8], [2, 5], [3, 10], [4, 4], [5, 16], [6, 5], [7, 11], [8, 6], [9, 11], [10, 30], [11, 10], [12, 13], [13, 4], [14, 3], [15, 3], [16, 6]
+            ];
+            var data2 = [
+                [0, 1], [1, 0], [2, 2], [3, 0], [4, 1], [5, 3], [6, 1], [7, 5], [8, 2], [9, 3], [10, 2], [11, 1], [12, 0], [13, 2], [14, 8], [15, 0], [16, 0]
+            ];
+            $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
+                data1, data2
+            ],
+                    {
+                        series: {
+                            lines: {
+                                show: false,
+                                fill: true
+                            },
+                            splines: {
+                                show: true,
+                                tension: 0.4,
+                                lineWidth: 1,
+                                fill: 0.4
+                            },
+                            points: {
+                                radius: 0,
+                                show: true
+                            },
+                            shadowSize: 2
+                        },
+                        grid: {
+                            hoverable: true,
+                            clickable: true,
+                            tickColor: "#d5d5d5",
+                            borderWidth: 1,
+                            color: '#d5d5d5'
+                        },
+                        colors: ["#1ab394", "#464f88"],
+                        xaxis: {
+                        },
+                        yaxis: {
+                            ticks: 4
+                        },
+                        tooltip: false
+                    }
+            );
+
+            var doughnutData = [
+                {
+                    value: 300,
+                    color: "#a3e1d4",
+                    highlight: "#1ab394",
+                    label: "App"
+                },
+                {
+                    value: 50,
+                    color: "#dedede",
+                    highlight: "#1ab394",
+                    label: "Software"
+                },
+                {
+                    value: 100,
+                    color: "#b5b8cf",
+                    highlight: "#1ab394",
+                    label: "Laptop"
+                }
+            ];
+
+            var doughnutOptions = {
+                segmentShowStroke: true,
+                segmentStrokeColor: "#fff",
+                segmentStrokeWidth: 2,
+                percentageInnerCutout: 45, // This is 0 for Pie charts
+                animationSteps: 100,
+                animationEasing: "easeOutBounce",
+                animateRotate: true,
+                animateScale: false,
+            };
+
+            var ctx = document.getElementById("doughnutChart").getContext("2d");
+            var DoughnutChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
+
+            var polarData = [
+                {
+                    value: 300,
+                    color: "#a3e1d4",
+                    highlight: "#1ab394",
+                    label: "App"
+                },
+                {
+                    value: 140,
+                    color: "#dedede",
+                    highlight: "#1ab394",
+                    label: "Software"
+                },
+                {
+                    value: 200,
+                    color: "#b5b8cf",
+                    highlight: "#1ab394",
+                    label: "Laptop"
+                }
+            ];
+
+            var polarOptions = {
+                scaleShowLabelBackdrop: true,
+                scaleBackdropColor: "rgba(255,255,255,0.75)",
+                scaleBeginAtZero: true,
+                scaleBackdropPaddingY: 1,
+                scaleBackdropPaddingX: 1,
+                scaleShowLine: true,
+                segmentShowStroke: true,
+                segmentStrokeColor: "#fff",
+                segmentStrokeWidth: 2,
+                animationSteps: 100,
+                animationEasing: "easeOutBounce",
+                animateRotate: true,
+                animateScale: false,
+            };
+            var ctx = document.getElementById("polarChart").getContext("2d");
+            var Polarchart = new Chart(ctx).PolarArea(polarData, polarOptions);
+
+        });
+    </script>
+}

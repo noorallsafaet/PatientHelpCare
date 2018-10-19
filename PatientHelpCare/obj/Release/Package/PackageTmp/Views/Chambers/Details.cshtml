@@ -1,0 +1,106 @@
+﻿@model PatientHelpCare.DataModel.Chamber
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Details of Chamber</h5>
+                    <div class="ibox-tools">
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary  btn-xs" })
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+
+                        <dt>
+                            @Html.DisplayFor(model => model.Name)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayNameFor(model => model.FromDay)
+                        </dd>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FromDay)
+                        </dd>
+
+                        <dd>
+                            @Html.DisplayNameFor(model => model.ToDay)
+                        </dd>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ToDay)
+                        </dd>
+
+                        <dd>
+                            @Html.DisplayNameFor(model => model.StartTime)
+                        </dd>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.StartTime)
+                        </dd>
+
+                        <dd>
+                            @Html.DisplayNameFor(model => model.Endtime)
+                        </dd>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Endtime)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.City)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.City)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Area)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Area)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Address1)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Address1)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Address2)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Address2)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ZipCode)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ZipCode)
+                        </dd>
+                    </dl>
+
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.ChamberId }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-white" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

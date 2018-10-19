@@ -1,0 +1,218 @@
+﻿@model PatientHelpCare.DataModel.Doctor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+
+
+    <div class="row m-b-lg m-t-lg ibox-content">
+        <div class="col-md-6">
+
+            <div class="profile-image">
+                
+                @if (Model.PhotoLocation != null)
+                {                    
+                    <img src="@Html.DisplayFor(model => model.PhotoLocation)" class="img-circle circle-border m-b-md" alt="profile">                }
+                else
+                {
+                    <img src="~/Images/unknown.png" class="img-circle circle-border m-b-md" alt="profile">                    
+                }
+            </div>
+            <div class="profile-info">
+                <div class="">
+                    <div>
+                        <h2 class="no-margins">
+                            @Html.DisplayFor(model => model.Firstname) @Html.DisplayFor(model => model.Lastname)
+                        </h2>
+                        <h4>@Html.DisplayFor(model => model.Specialist)</h4>
+                        
+                        <small>
+                            <p><h4>Fees: @Html.DisplayFor(model => model.Fee) tk.</h4></p>
+                            <p>Email: @Html.DisplayFor(model => model.AspNetUser.Email)</p>
+                            <p>Mobile: @Html.DisplayFor(model => model.Mobile)</p>
+                            <p>Work Phone: @Html.DisplayFor(model => model.Officephone)</p>
+                            <p>Home Phone: @Html.DisplayFor(model => model.Homephone)</p>
+                            <p>Address: @Html.DisplayFor(model => model.Address1)  @Html.DisplayFor(model => model.Address2), 
+                            @Html.DisplayFor(model => model.Area), @Html.DisplayFor(model => model.City)</p>
+                                
+</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <table class="table small m-b-xs">
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>@ViewBag.TotalAppoinment</strong> Completed
+                        </td>
+                        <td><strong>@ViewBag.Declined</strong> Declined</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>@ViewBag.Successful</strong> Successful
+                        </td>
+                        <td>
+                            <strong>@ViewBag.Unsuccessful</strong> Unsuccessful
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-16">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h3>About @Html.DisplayFor(model => model.Firstname) @Html.DisplayFor(model => model.Lastname)</h3>
+
+                    <p class="small">
+                        @Html.DisplayFor(model => model.OverView)
+                    </p>
+                    <p class="small font-bold">
+                        @*<span><i class="fa fa-circle text-navy"></i> Online status</span>*@
+                    </p>
+                </div>
+            </div>
+            
+            <div class="ibox">
+                <div class="ibox-content">
+
+                    <h3>Chamber</h3>
+                    @foreach (var item in ViewBag.Chamber)
+                    {
+                        <hr />
+                        <div class="search-result">
+                            <div>
+                                <h3 style="color:#1ab394">@item.Name</h3>
+                                <a href="#" class="search-link">@item.Area</a><br />
+                                <p>
+                                    <strong>Day:</strong> @item.FromDay - @item.ToDay
+                                </p>
+                                <p>
+                                    <strong>Time:</strong> @item.StartTime - @item.Endtime
+                                </p>
+                                <p>
+                                   <strong>Address:</strong> @item.Address1, @item.Address2 @item.City
+                                </p>
+                                <p>
+                                    <strong>Email:</strong> @item.Email
+                                </p>
+                                <p>
+                                    <strong>Phone:</strong> @item.Phone
+                                </p>
+                            </div>
+                        </div>
+                    }
+                    <hr />
+                </div>
+            </div>    
+
+            <div class="ibox">
+                <div class="ibox-content">
+
+                    <h3>Experience</h3>
+                    @foreach (var item in ViewBag.Experience)
+                    {
+                        <hr />
+                        <div class="search-result">
+                            <div>
+                                <h3 style="color:#1ab394">@item.Designation</h3>
+                                <p><strong>@item.Organization  </strong>@item.EndDate.ToString("dd MMM yyyy") - @item.StartDate.ToString("dd MMM yyyy")</p>
+                                <p>
+                                    @item.Summery
+                                </p>
+                            </div>
+                        </div>
+                    }
+                    <hr />
+                </div>
+            </div> 
+
+            <div class="ibox">
+                <div class="ibox-content">
+
+                    <h3>Qualification</h3>
+                    @foreach (var item in ViewBag.Qualification)
+                    {
+                        <hr />
+                        <div class="search-result">
+                            <div>
+                                <h3 style="color:#1ab394">@item.Degree</h3>
+                                <p><strong>@item.University, @item.Country </strong> @item.StartYear - @item.EndYear</p>
+                               
+                            </div>
+                        </div>
+                    }
+                    <hr />
+                </div>
+            </div>
+
+            <div class="ibox">
+                <div class="ibox-content">
+
+                    <h3>Certifications</h3>
+                    @foreach (var item in ViewBag.Certificate)
+                    {
+                        <hr />
+                        <div class="search-result">
+                            <div>
+                                <h3 style="color:#1ab394">@item.ProfessionalCertificateorAward (@item.Year)</h3>
+                                <p><strong>@item.ConferringOrganization  </strong></p>
+                                <p>
+                                    @item.Description
+                                </p>
+                            </div>
+                        </div>
+                    }
+                    <hr />
+                </div>
+            </div>
+@using (Html.BeginForm("SendMessage", "Doctors", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h3>Appointment request</h3>
+                    <input type="hidden" name="DoctorId" value="@Model.DoctorId" />
+                    <p class="small">
+                        Send Appointment request to @Html.DisplayFor(model => model.Firstname) @Html.DisplayFor(model => model.Lastname)
+                    </p>
+
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input name="Subject" type="text" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" name="Message" placeholder="Type your message" rows="3"></textarea>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block">Send</button>
+                </div>
+            </div>
+}
+        </div>        
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/plugins/sparkLine")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#sparkline1").sparkline([34, 43, 43, 35, 44, 32, 44, 48], {
+                type: 'line',
+                width: '100%',
+                height: '50',
+                lineColor: '#1ab394',
+                fillColor: "transparent"
+            });
+
+        });
+    </script>
+}

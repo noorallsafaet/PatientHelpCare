@@ -1,0 +1,110 @@
+﻿@model IEnumerable<PatientHelpCare.DataModel.Message>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-lg-12 animated fadeInRight">
+            <div class="mail-box-header">
+
+                <form method="get" action="#" class="pull-right mail-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control input-sm" name="search" placeholder="Search email">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                @*<h2>
+                        Inbox (16)
+                    </h2>*@
+                <div class="mail-tools tooltip-demo m-t-md">
+                    <div class="btn-group pull-right">
+                        @*<button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
+                            <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>*@
+
+                    </div>
+                    @*<button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="Refresh inbox"><i class="fa fa-refresh"></i> Refresh</button>
+                                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
+                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as important"><i class="fa fa-exclamation"></i> </button>
+                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to trash"><i class="fa fa-trash-o"></i> </button>*@
+
+                </div>
+            </div>
+            <div class="mail-box">
+
+                <table class="table table-hover table-mail">
+                    
+    @{
+        if (ViewBag.UserType == "Doctor")
+        {
+        <th>
+            Patient
+        </th>
+        }
+        else
+        {
+            <th>
+                Doctor
+            </th>
+        }
+    }        
+                        <th>
+                            Message
+                        </th>
+                        <th>Date Time</th>
+                    
+                    <tbody>
+                @foreach (var item in Model)
+                    {
+                        <tr class="unread">
+                            @*<td class="check-mail">
+                                <input type="checkbox" class="i-checks">
+                            </td>*@
+                            @{
+                                if (ViewBag.UserType == "Doctor")
+                                {
+                                    <td class="mail-ontact"><a href="@Url.Action("Details", "Messages", new { id = item.Id })">@Html.DisplayFor(modelItem => item.Patient.Firstname) @Html.DisplayFor(modelItem => item.Patient.Lastname)</a></td>
+                                }
+                                else
+                                {
+                                    <td class="mail-ontact"><a href="@Url.Action("Details", "Messages", new { id = item.Id })">@Html.DisplayFor(modelItem => item.Doctor.Firstname) @Html.DisplayFor(modelItem => item.Doctor.Lastname)</a></td>
+                                }
+                            }
+                            
+                            <td class="mail-subject"><a href="@Url.Action("Details", "Messages", new { id = item.Id })">@Html.DisplayFor(modelItem => item.Subject)</a></td>
+                            @*<td class=""><i class="fa fa-paperclip"></i></td>*@
+                            <td class="text-right mail-date">@Html.DisplayFor(modelItem => item.DateTime)</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+}
+
+@section Scripts {
+    @Scripts.Render("~/plugins/iCheck")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+        });
+    </script>
+}

@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm("Create", "Messages", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+                @Html.AntiForgeryToken()
+
+            <div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-lg-12 animated fadeInRight">
+            <div class="mail-box-header">
+                
+                <h2>
+                    Write Message
+                </h2>
+            </div>
+            <div class="mail-box">
+                <div class="mail-body">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">To:</label>
+                            <div class="col-sm-10"><input type="text" class="form-control" name="Email" value="" placeholder="abc@ithelpcare.com">                            
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Subject:</label>
+                            <div class="col-sm-10"><input type="text" class="form-control" name="Subject" value="">                            
+                            </div>
+                        </div>
+                </div>
+
+                <div class="mail-text h-200">
+                    <textarea class="summernote" name="Message1" id="Message1" value="" ></textarea>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="mail-body text-right tooltip-demo">
+                    <input type="submit" value="Send" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Send" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@section Styles {
+    @Styles.Render("~/plugins/summernoteStyles")
+}
+
+@section Scripts {
+    @Scripts.Render("~/plugins/summernote")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.summernote').summernote();
+
+        });
+
+    </script>
+}

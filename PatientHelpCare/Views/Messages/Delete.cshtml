@@ -1,0 +1,80 @@
+﻿@model PatientHelpCare.DataModel.Message
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Message</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarkRead)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarkRead)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sentby)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sentby)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient.Firstname)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

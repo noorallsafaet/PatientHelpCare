@@ -1,0 +1,70 @@
+﻿@model IEnumerable<PatientHelpCare.DataModel.Doctor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="wrapper wrapper-content animated fadeInUp">
+    <div class="ibox">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>My Information</h5>
+                <div class="ibox-tools">
+                    
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row m-b-sm m-t-sm">
+                    
+                </div>
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Firstname)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Lastname)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Title)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Specialist)
+                        </th>
+                        <th>
+                            Photo
+                        </th>
+                        <th>Action</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Firstname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Lastname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Specialist)
+                            </td>
+                            <td>
+                                <img style="width:100px;height:100px;" src="@Html.DisplayFor(modelItem => item.PhotoLocation)" alt="" />
+                                
+                            </td>
+                            <td>
+                                @Html.ActionLink("Details", "Details", new { id = item.DoctorId }, new { @class = "btn btn-primary btn-sm" })
+                                @Html.ActionLink("Edit", "Edit", new { id = item.DoctorId }, new { @class = "btn btn-white btn-sm" })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

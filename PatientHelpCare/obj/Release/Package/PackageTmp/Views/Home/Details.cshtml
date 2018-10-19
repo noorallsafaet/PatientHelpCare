@@ -1,0 +1,386 @@
+﻿@model PatientHelpCare.DataModel.Doctor
+
+@{
+    Layout = null;
+    ViewBag.Title = "Details";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Doctor Information | @ViewBag.Title</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- Add jQuery Style direct - used for jQGrid plugin -->
+    <link href="@Url.Content("~/Scripts/plugins/jquery-ui/jquery-ui.css")" rel="stylesheet" type="text/css" />
+
+    <!-- Primary Inspinia style -->
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/font-awesome/css")
+    <style>
+        .p-0-left, .p-0-left-right {
+            padding-left: 0 !important;
+        }
+
+        .pager {
+            margin: 8px 3px;
+            padding: 3px;
+        }
+
+            .pager .disabled {
+                border: 1px solid #1ab394;
+                color: #999;
+                margin-top: 4px;
+                padding: 3px;
+                text-align: center;
+            }
+
+            .pager .current {
+                background-color: #1ab394;
+                border: 1px solid #1ab394;
+                color: #fff;
+                font-weight: bold;
+                margin-top: 4px;
+                padding: 3px 5px;
+                text-align: center;
+            }
+
+            .pager span, .pager a {
+                margin: 4px 3px;
+            }
+
+            .pager a {
+                border: 1px solid #1ab394;
+                padding: 3px 5px;
+                text-align: center;
+                text-decoration: none;
+            }
+
+        .table {
+            border-collapse: collapse;
+        }
+
+        td {
+            padding-top: .5em;
+            padding-bottom: .5em;
+        }
+    </style>
+
+</head>
+<body id="page-top" class="landing-page">
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="@Url.Action("Dashboard", "Dashboards")">Dashboard</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="/Home/Index">Home</a></li>
+                        <li><a class="page-scroll" href="/Home/Index">Find Doctors</a></li>
+                        <li><a class="page-scroll" href="#contact">Contact</a></li>
+                        <li><a class="page-scroll" href="/Account/Register">Register</a></li>
+                        <li><a class="page-scroll" href="/Account/Login">Login</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <section id="features" class="container services">
+        <script src="~/Scripts/jquery-2.2.3.js"></script>
+        <script src="~/Scripts/Doctors.js"></script>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-9">
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+
+                            <div class="col-md-6">
+
+                                <div class="profile-image">
+                                    <img src="@Html.DisplayFor(model => model.PhotoLocation)" class="img-circle circle-border m-b-md" alt="profile">
+                                </div>
+                                <div class="profile-info">
+                                    <div class="">
+                                        <div>
+                                            <h2 class="no-margins">
+                                                @Html.DisplayFor(model => model.Firstname) @Html.DisplayFor(model => model.Lastname)
+                                            </h2><br />
+                                            <p>Specialist: @Html.DisplayFor(model => model.Specialist)</p>
+                                            <small>
+                                                <p>Email: @Html.DisplayFor(model => model.AspNetUser.Email)</p>
+                                                <p>Mobile: @Html.DisplayFor(model => model.Mobile)</p>
+                                                <p>Work Phone: @Html.DisplayFor(model => model.Officephone)</p>
+                                                <p>Home Phone: @Html.DisplayFor(model => model.Homephone)</p>
+                                                <p>
+                                                    Address: @Html.DisplayFor(model => model.Address1)  @Html.DisplayFor(model => model.Address2),
+                                                    @Html.DisplayFor(model => model.Area), @Html.DisplayFor(model => model.City)
+                                                </p>
+
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <table class="table small m-b-xs">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong>@ViewBag.TotalAppoinment</strong> Completed
+                                            </td>
+                                            <td><strong>@ViewBag.Declined</strong> Declined</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>@ViewBag.Successful</strong> Successful
+                                            </td>
+                                            <td>
+                                                <strong>@ViewBag.Unsuccessful</strong> Unsuccessful
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-16">
+                                <div class="ibox">
+                                    <div class="ibox-content">
+                                        <h3>About @Html.DisplayFor(model => model.Firstname) @Html.DisplayFor(model => model.Lastname)</h3>
+
+                                        <p class="small">
+                                            @Html.DisplayFor(model => model.OverView)
+                                        </p>
+                                        <p class="small font-bold">
+                                            <span><i class="fa fa-circle text-navy"></i> Online status</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="ibox">
+                                    <div class="ibox-content">
+
+                                        <h3>Chamber</h3>
+                                        @foreach (var item in ViewBag.Chamber)
+                                        {
+                                            <hr />
+                                            <div class="search-result">
+                                                <div>
+                                                    <h3 style="color:#1ab394">@item.Name</h3>
+                                                    <a href="#" class="search-link">@item.Area</a><br />
+                                                    <p>
+                                                        <strong>Day:</strong> @item.FromDay - @item.ToDay
+                                                    </p>
+                                                    <p>
+                                                        <strong>Time:</strong> @item.StartTime - @item.Endtime
+                                                    </p>
+                                                    <p>
+                                                        <strong>Address:</strong> @item.Address1, @item.Address2 @item.City
+                                                    </p>
+                                                    <p>
+                                                        <strong>Email:</strong> @item.Email
+                                                    </p>
+                                                    <p>
+                                                        <strong>Phone:</strong> @item.Phone
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        }
+                                        <hr />
+                                    </div>
+                                </div>
+
+                                <div class="ibox">
+                                    <div class="ibox-content">
+
+                                        <h3>Experience</h3>
+                                        @foreach (var item in ViewBag.Experience)
+                                        {
+                                            <hr />
+                                            <div class="search-result">
+                                                <div>
+                                                    <h3 style="color:#1ab394">@item.Designation</h3>
+                                                    <p><strong>@item.Organization  </strong>@item.EndDate.ToString("dd MMM yyyy") - @item.StartDate.ToString("dd MMM yyyy")</p>
+                                                    <p>
+                                                        @item.Summery
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        }
+                                        <hr />
+                                    </div>
+                                </div>
+
+                                <div class="ibox">
+                                    <div class="ibox-content">
+
+                                        <h3>Qualification</h3>
+                                        @foreach (var item in ViewBag.Qualification)
+                                        {
+                                            <hr />
+                                            <div class="search-result">
+                                                <div>
+                                                    <h3 style="color:#1ab394">@item.Degree</h3>
+                                                    <p><strong>@item.University, @item.Country </strong> @item.StartYear - @item.EndYear</p>
+
+                                                </div>
+                                            </div>
+                                        }
+                                        <hr />
+                                    </div>
+                                </div>
+
+                                <div class="ibox">
+                                    <div class="ibox-content">
+
+                                        <h3>Certifications</h3>
+                                        @foreach (var item in ViewBag.Certificate)
+                                        {
+                                            <hr />
+                                            <div class="search-result">
+                                                <div>
+                                                    <h3 style="color:#1ab394">@item.ProfessionalCertificateorAward (@item.Year)</h3>
+                                                    <p><strong>@item.ConferringOrganization  </strong></p>
+                                                    <p>
+                                                        @item.Description
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        }
+                                        <hr />
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="gray-section contact">
+        <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>Contact Us</h1>
+                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                </div>
+            </div>
+            <div class="row m-b-lg">
+                <div class="col-lg-3 col-lg-offset-3">
+                    <address>
+                        <strong><span class="navy">IT Help Care</span></strong><br />
+                        House#1, Road#1, Latif Real State<br />
+                        Mohammadpur, Dhaka 1207<br />
+                        <abbr title="Phone">P:</abbr> 01716133029
+                    </address>
+                </div>
+                <div class="col-lg-4">
+                    <p class="text-color">
+                        Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad perspiciatis, totam corporis laboriosam veritatis, consectetur adipisicing elit quos non quis ad perspiciatis, totam corporis ea,
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
+                    <p class="m-t-sm">
+                        Or follow us on social platform
+                    </p>
+                    <ul class="list-inline social-icon">
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                    <p><strong>&copy; 2015 IT Help Care</strong><br /> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section for main scripts render -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/plugins/slimScroll")
+    @Scripts.Render("~/bundles/inspinia")
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('body').scrollspy({
+                target: '.navbar-fixed-top',
+                offset: 80
+            });
+
+            // Page scrolling feature
+            $('a.page-scroll').bind('click', function (event) {
+                var link = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $(link.attr('href')).offset().top - 50
+                }, 500);
+                event.preventDefault();
+                $('#navbar').collapse('hide');
+            });
+        });
+
+        var cbpAnimatedHeader = (function () {
+            var docElem = document.documentElement,
+                    header = document.querySelector('.navbar-default'),
+                    didScroll = false,
+                    changeHeaderOn = 200;
+            function init() {
+                window.addEventListener('scroll', function (event) {
+                    if (!didScroll) {
+                        didScroll = true;
+                        setTimeout(scrollPage, 250);
+                    }
+                }, false);
+            }
+            function scrollPage() {
+                var sy = scrollY();
+                if (sy >= changeHeaderOn) {
+                    $(header).addClass('navbar-scroll')
+                }
+                else {
+                    $(header).removeClass('navbar-scroll')
+                }
+                didScroll = false;
+            }
+            function scrollY() {
+                return window.pageYOffset || docElem.scrollTop;
+            }
+            init();
+
+        })();
+
+    </script>
+</body>

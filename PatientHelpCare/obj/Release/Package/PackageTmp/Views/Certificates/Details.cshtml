@@ -1,0 +1,58 @@
+﻿@model PatientHelpCare.DataModel.Certificate
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Details of Certificate</h5>
+                    <div class="ibox-tools">
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary  btn-xs" })
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Award
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ProfessionalCertificateorAward)
+                        </dd>
+
+                        <dt>
+                            Organization
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ConferringOrganization)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Year)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Year)
+                        </dd>
+                    </dl>
+
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.CertificateId }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-white" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

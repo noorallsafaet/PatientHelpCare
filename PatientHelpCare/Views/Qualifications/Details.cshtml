@@ -1,0 +1,74 @@
+﻿@model PatientHelpCare.DataModel.Qualification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Details of Qualification</h5>
+                    <div class="ibox-tools">
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary  btn-xs" })
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Country)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Country)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.University)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.University)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Degree)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Degree)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.StartYear)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.StartYear)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.EndYear)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.EndYear)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Doctor.Firstname)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Doctor.Firstname)
+                        </dd>
+
+                    </dl>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-white" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Doctor" Relationship="Model.FK_Doctors_AspNetUsers" FromRole="AspNetUser" ToRole="Doctor" />
+  </EntityType>
+  <EntityType Name="Chamber">
+    <Key>
+      <PropertyRef Name="ChamberId" />
+    </Key>
+    <Property Name="ChamberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="Int32" Nullable="false" />
+    <Property Name="DoctorId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Doctor" Relationship="Model.FK_Chamber_Doctors" FromRole="Chamber" ToRole="Doctor" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="Firstname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Blood" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="CellPhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="WorkPhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaritialStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Doctor_InformationEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="Chambers" EntityType="Self.Chamber" />
+    <EntitySet Name="Patients" EntityType="Self.Patient" />
+    <EntitySet Name="Experiences" EntityType="Model.Experience" />
+    <EntitySet Name="Qualifications" EntityType="Model.Qualification" />
+    <EntitySet Name="Certificates" EntityType="Model.Certificate" />
+    <EntitySet Name="Doctors" EntityType="Model.Doctor" />
+    <AssociationSet Name="FK_Doctors_AspNetUsers" Association="Model.FK_Doctors_AspNetUsers">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Certificate_Doctors" Association="Model.FK_Certificate_Doctors">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Certificate" EntitySet="Certificates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chamber_Doctors" Association="Model.FK_Chamber_Doctors">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Chamber" EntitySet="Chambers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Experience_Doctors" Association="Model.FK_Experience_Doctors">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Experience" EntitySet="Experiences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Qualification_Doctors" Association="Model.FK_Qualification_Doctors">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Qualification" EntitySet="Qualifications" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="ExperienceId" />
+    </Key>
+    <Property Name="ExperienceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Designation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Organization" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="Running" Type="Boolean" />
+    <Property Name="Summery" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="DoctorId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Doctor" Relationship="Model.FK_Experience_Doctors" FromRole="Experience" ToRole="Doctor" />
+  </EntityType>
+  <EntityType Name="Qualification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Degree" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="University" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="StartYear" Type="Int32" Nullable="false" />
+    <Property Name="EndYear" Type="Int32" Nullable="false" />
+    <Property Name="DoctorId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Doctor" Relationship="Model.FK_Qualification_Doctors" FromRole="Qualification" ToRole="Doctor" />
+  </EntityType>
+  <EntityType Name="Certificate">
+    <Key>
+      <PropertyRef Name="CertificateId" />
+    </Key>
+    <Property Name="CertificateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProfessionalCertificateorAward" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ConferringOrganization" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="DoctorId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Doctor" Relationship="Model.FK_Certificate_Doctors" FromRole="Certificate" ToRole="Doctor" />
+  </EntityType>
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="DoctorId" />
+    </Key>
+    <Property Name="DoctorId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Firstname" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Lastname" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BMDC" Type="Int32" Nullable="false" />
+    <Property Name="Specialist" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OverView" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Gender" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="PhotoLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PhotoName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="Homephone" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="Officephone" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="Int32" />
+    <Property Name="JoinDate" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" />
+    <NavigationProperty Name="AspNetUser" Relationship="Model.FK_Doctors_AspNetUsers" FromRole="Doctor" ToRole="AspNetUser" />
+    <NavigationProperty Name="Certificates" Relationship="Model.FK_Certificate_Doctors" FromRole="Doctor" ToRole="Certificate" />
+    <NavigationProperty Name="Chambers" Relationship="Model.FK_Chamber_Doctors" FromRole="Doctor" ToRole="Chamber" />
+    <NavigationProperty Name="Experiences" Relationship="Model.FK_Experience_Doctors" FromRole="Doctor" ToRole="Experience" />
+    <NavigationProperty Name="Qualifications" Relationship="Model.FK_Qualification_Doctors" FromRole="Doctor" ToRole="Qualification" />
+  </EntityType>
+  <Association Name="FK_Doctors_AspNetUsers">
+    <End Type="Model.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+    <End Type="Model.Doctor" Role="Doctor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Certificate_Doctors">
+    <End Type="Model.Doctor" Role="Doctor" Multiplicity="0..1" />
+    <End Type="Model.Certificate" Role="Certificate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Certificate">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chamber_Doctors">
+    <End Type="Model.Doctor" Role="Doctor" Multiplicity="1" />
+    <End Type="Model.Chamber" Role="Chamber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Chamber">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Experience_Doctors">
+    <End Type="Model.Doctor" Role="Doctor" Multiplicity="0..1" />
+    <End Type="Model.Experience" Role="Experience" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Experience">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Qualification_Doctors">
+    <End Type="Model.Doctor" Role="Doctor" Multiplicity="1" />
+    <End Type="Model.Qualification" Role="Qualification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="Qualification">
+        <PropertyRef Name="DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
